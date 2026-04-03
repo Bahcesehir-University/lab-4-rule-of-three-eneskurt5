@@ -159,7 +159,7 @@ public:
     void setData(const char* newData) {
         delete[] m_data;
         m_length= strlen(newData);
-        new char[m_length + 1];
+        m_data = new char[m_length + 1];
         strcpy(m_data,newData);
         
         // TODO: Implement setData
